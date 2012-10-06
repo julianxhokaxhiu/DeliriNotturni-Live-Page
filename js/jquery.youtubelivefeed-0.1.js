@@ -50,7 +50,7 @@ var YoutubeLiveFeed;
 			
 			// Do this only if the input is not already binded
 			if(!placeholder.data('embed')){
-				$.getJSON('//gdata.youtube.com/feeds/api/users/' + settings.uid + '/live/events',{'v':'2','alt':'json'},function(data){
+				$.getJSON('//gdata.youtube.com/feeds/api/users/' + settings.uid + '/live/events',{'v':'2','alt':'json','status':'active'},function(data){
 					var isLive = false;
 					$.each(data.feed.entry,function(i,v){
 						if(v['yt$status']['$t'] == 'active'){
@@ -59,7 +59,7 @@ var YoutubeLiveFeed;
 						}
 					});
 					if(isLive){
-						settings._vid = /(\/)(\w+)(\?)/g.exec(data.content.src)[2];
+						settings._vid = /(\/)(\w+(?:-)\w+)(\?)/g.exec(data.content.src)[2];
 						settings.onComplete({
 							'videoId':settings._vid,
 							'isLive':isLive
