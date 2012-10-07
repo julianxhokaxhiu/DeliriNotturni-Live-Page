@@ -67,7 +67,7 @@ var YoutubeLiveFeed;
 						placeholder.data('embed',true);
 					}else{
 						$.getJSON('//gdata.youtube.com/feeds/api/users/' + settings.uid + '/uploads',{'v':'2','alt':'json','max-results':'1'},function(data){
-							settings._vid = data.feed.entry[0].id['$t'].match(/\w+$/g)[0];
+							settings._vid = data.feed.entry[0].id['$t'].match(/\w+(?:-)\w+$/g)[0];
 							settings.onComplete({
 								'videoId':settings._vid,
 								'isLive':isLive
