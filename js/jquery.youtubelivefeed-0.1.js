@@ -52,7 +52,7 @@ var YoutubeLiveFeed;
 			if(!placeholder.data('embed')){
 				$.getJSON('//gdata.youtube.com/feeds/api/users/' + settings.uid + '/live/events',{'v':'2','alt':'json','status':'active'},function(data){
 					var isLive = false;
-					$.each(data.feed.entry,function(i,v){
+					if(data.feed.entry)$.each(data.feed.entry,function(i,v){
 						if(v['yt$status']['$t'] == 'active'){
 							data=v;
 							isLive=true
