@@ -1,22 +1,14 @@
-/* CSS Document */
-*:focus{outline:none}
-body{width:100%;height:100%;font-family:Arial,sans-serif}
-ol{list-style-type:disc}
-h1{padding:1em 0;text-align:center;text-transform:uppercase;background-color:#ccc;color:#333}
-/* TOP */
-.top{width:100%;overflow:hidden}
-.youtube,.twitter{float:left}
-.twitter{width:25%}
-.video{float:left;display:block;width:75%;height:603px}
-/* BOTTOM */
-#youtube-tab{padding:1em 0 1em 0.5em}
-.youtube_comments li{padding-bottom:1em}
-.youtube_comments li *{padding-right:5px}
-.youtube_comments .time,.youtube_comments .separator{color:#aaa}
-.youtube_comments .nick{text-decoration:none;color:#3A3427}
-.youtube_comments .nick:hover{color:#f00}
-#irc-tab{padding:0}
-.live{position:absolute;top:10px;right:10px;padding:0.5em 1em;font-weight:bold;background-color:#f00;color:#fff}
-.credits{display:block;width:100%;padding:1em 0;text-align:center;color:#aaa;font-size:0.9em}
-.credits a{text-decoration:none;color:#999}
-.credits a:hover{color:#f00}
+body{padding-top:60px;background-image:url(../img/backgroundNoise.png);background-position:left top;background-repeat:repeat;background-color:#5F7089}
+h2{color:#fff;text-shadow:1px 1px 3px #000}
+.alert a{font-weight:bold}
+.video-container{padding:0;background:none}
+.video-container object{display:block}
+.alert-comments{margin:20px 0 0}
+.video_comments{background-color:#EEE;height:580px;overflow-y:auto;list-style-type:none;padding:10px 20px;margin:0;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px}
+.video_comments li{padding-bottom:5px;margin-bottom:5px;border-bottom:1px solid #CCC}
+.video_comments li.last{padding-bottom:0;margin-bottom:0;border-bottom:none}
+.video_comments .time{color:#aaa;padding-right:5px}
+.video_comments .comment{padding-top:10px}
+footer{padding-top:10px;text-shadow:1px 1px 3px #000}
+footer p{color:#fff}
+footer a,footer a:hover{color:#ddd}
