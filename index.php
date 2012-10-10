@@ -41,7 +41,7 @@
 		<div class="container">
 			<div class="alert alert-info fade in" style="display:none">
 				<a class="close" data-dismiss="alert" href="#">×</a>
-				<strong>Siamo Live!</strong>&nbsp;Ricordatevi che potrete trovare la registrazione di questa puntata direttamente sul <a href="http://www.youtube.com/playlist?list=PL7VRlyo2yZsWMwYqu5896dh3CZpgqBX5X&feature=plcp">canale</a>, una volta concluso :)
+				<strong>Siamo Live!</strong> Ricordatevi che potrete trovare la registrazione di questa puntata direttamente sul <a href="http://www.youtube.com/playlist?list=PL7VRlyo2yZsWMwYqu5896dh3CZpgqBX5X&feature=plcp">canale</a>, una volta concluso :)
 			</div>
 			<div class="video-container">
 				<!-- Here we'll place the youtube video -->
@@ -61,7 +61,7 @@
 				</div>
 			</div>
 			<footer>
-				<p>Realizzato da <a href="http://www.julianxhokaxhiu.com/" title="Julian Xhokaxhiu - Web Designer and Developer">Julian Xhokaxhiu</a>, <?php echo (date('Y') == "2012") ? "2012" : "2012 - ".date('Y') ?> per <a href="http://www.delirinotturni.org/">Deliri Notturni</a></p>
+				<p>Realizzato da <a href="http://www.julianxhokaxhiu.com/" title="Julian Xhokaxhiu - Web Designer and Developer">Julian Xhokaxhiu</a>, <?php echo (date('Y') == "2012") ? "2012" : "2012 - ".date('Y') ?> per <a href="http://www.delirinotturni.org/">Deliri Notturni</a>.<br/>Questa pagina è Open Source ed è coperta da licenza <a href="http://www.gnu.org/licenses/gpl.html">GPLv3</a>. Il suo codice sorgente può essere scaricato, modificato e visionato sul repository pubblico di <a href="https://github.com/julianxhokaxhiu/DeliriNotturi-Live-Page">GitHub</a>.</p>
 			</footer>
 		</div>
 	</body>
