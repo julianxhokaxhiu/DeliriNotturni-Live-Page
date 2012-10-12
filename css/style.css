@@ -2,7 +2,7 @@ body{padding-top:60px;background-image:url(../img/backgroundNoise.png);backgroun
 h2{color:#fff;text-shadow:1px 1px 3px #000}
 .alert a{font-weight:bold}
 .video-container{padding:0;background:none}
-.video-container object{display:block}
+.video-container object{display:block;-webkit-box-shadow:0 0 26px 1px #333;box-shadow:0 0 26px 1px #333}
 .alert-comments{margin:20px 0 0}
 .video_comments{background-color:#EEE;height:580px;overflow-y:auto;list-style-type:none;padding:10px 20px;margin:0;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px}
 .video_comments li{padding-bottom:5px;margin-bottom:5px;border-bottom:1px solid #CCC}
