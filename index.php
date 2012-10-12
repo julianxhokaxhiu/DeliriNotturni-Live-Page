@@ -56,7 +56,7 @@
 				</div>
 				<div class="span4">
 					<h2>Twitter</h2>
-					<a class="twitter-timeline" href="https://twitter.com/DeliriNotturni" data-widget-id="254323608082595840">Tweets di @DeliriNotturni</a>
+					<a class="twitter-timeline" href="https://twitter.com/DeliriNotturni" data-widget-id="256789026332352513">Tweets di @DeliriNotturni</a>
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 				</div>
 			</div>
