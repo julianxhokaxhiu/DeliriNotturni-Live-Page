@@ -7,7 +7,9 @@
 	Author: Julian Xhokaxhiu
 	Date: 05/010/2012
 	Changelog:
-		- 0.1:  initial relase version.
+	    - 0.2: added onLive event
+	    	   bugfixes
+		- 0.1: initial relase version.
 */
 var YoutubeLiveFeed;
 (function ($) {
@@ -18,7 +20,9 @@ var YoutubeLiveFeed;
 		if(!settings){
 			settings = {
 				'uid':'',
-				'onComplete':function(data){}
+				'checkLiveInterval':15000, // Set to 0 to disable the check
+				'onComplete':function(data){},
+				'onLive':function(data){}
 			}
 		};
 		// Private methods - can only be called from within this object
@@ -27,7 +31,7 @@ var YoutubeLiveFeed;
 				if(!callback)callback=function(){};
 				$.getJSON('//gdata.youtube.com/feeds/api/videos/' + settings._vid + '/comments',{'v':'2','alt':'json'},function(r){
 					var comments = [];
-					$.each(r.feed.entry,function(i,v){
+					if(r.feed.entry)$.each(r.feed.entry,function(i,v){
 						comments.push({
 							'user':v.author[0].name['$t'],
 							'url':v.author[0].uri['$t'].replace('/gdata.youtube.com/feeds/api/users','/www.youtube.com/user'),
@@ -39,6 +43,9 @@ var YoutubeLiveFeed;
 					});
 					callback(comments);
 				})
+			},
+			'clearLiveCheck':function(){
+				clearInterval(settings._liveCheckID);
 			}
 		};
 		
@@ -74,6 +81,25 @@ var YoutubeLiveFeed;
 							});
 							placeholder.data('embed',true);
 						});
+						if(settings.checkLiveInterval)settings._liveCheckID = setInterval(function(){
+							$.getJSON('//gdata.youtube.com/feeds/api/users/' + settings.uid + '/live/events',{'v':'2','alt':'json','status':'active'},function(data){
+								var isLive = false;
+								if(data.feed.entry){
+									$.each(data.feed.entry,function(i,v){
+										if(v['yt$status']['$t'] == 'active'){
+											data=v;
+											isLive=true
+										}
+									});
+									if(isLive){
+										settings._vid = /(\/)(\w+(?:-|)\w+)(\?)/g.exec(data.content.src)[2];
+										settings.onLive({
+											'videoId':settings._vid
+										});
+									}
+								}
+							});
+						},settings.checkLiveInterval)
 					}
 				})
 			}

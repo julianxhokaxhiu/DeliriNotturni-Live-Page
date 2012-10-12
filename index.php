@@ -15,7 +15,7 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery.youtubelivefeed-0.1.js"></script>
+		<script src="js/jquery.youtubelivefeed-0.2.js"></script>
 		<script src="js/scripts.js"></script>
 	</head>
 	<body>

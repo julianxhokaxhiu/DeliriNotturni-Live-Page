@@ -26,6 +26,10 @@ jQuery(function($){
 				$('.alert').alert().show();
 				setInterval(getComments,5000);				
 			}else getComments();
+		},
+		'onLive':function(){
+			alert('Un live sta per iniziare! La pagina verra\' ora ricaricata :)');
+			window.location.reload();
 		}
 	});
 })
