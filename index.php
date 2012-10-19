@@ -61,7 +61,7 @@
 				</div>
 			</div>
 			<footer>
-				<p>Realizzato da <a href="http://www.julianxhokaxhiu.com/" title="Julian Xhokaxhiu - Web Designer and Developer">Julian Xhokaxhiu</a>, <?php echo (date('Y') == "2012") ? "2012" : "2012 - ".date('Y') ?> per <a href="http://www.delirinotturni.org/">Deliri Notturni</a>.<br/>Questa pagina è Open Source ed è coperta da licenza <a href="http://www.gnu.org/licenses/gpl.html">GPLv3</a>. Il suo codice sorgente può essere scaricato, modificato e visionato sul repository pubblico di <a href="https://github.com/julianxhokaxhiu/DeliriNotturi-Live-Page">GitHub</a>.</p>
+				<p>Realizzato da <a href="http://www.julianxhokaxhiu.com/" title="Julian Xhokaxhiu - Web Designer and Developer">Julian Xhokaxhiu</a>, <?php echo (date('Y') == "2012") ? "2012" : "2012 - ".date('Y') ?> per <a href="http://www.delirinotturni.org/">Deliri Notturni</a>.<br/>Questa pagina è Open Source ed è coperta da licenza <a href="http://www.gnu.org/licenses/gpl.html">GPLv3</a>. Il suo codice sorgente può essere scaricato, modificato e visionato sul repository pubblico di <a href="https://github.com/julianxhokaxhiu/DeliriNotturni-Live-Page">GitHub</a>.</p>
 			</footer>
 		</div>
 	</body>
